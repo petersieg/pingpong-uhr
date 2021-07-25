@@ -4,6 +4,10 @@ Bascom Eval. Version used.
 
 Skeleton Program by Wolfram Herzog.
 
+avrdude -c usbasp -p m8 -U flash:w:PingPong_Uhr_PS2.hex:i
+
+avrdude -c usbasp -p m8 -U lfuse:w:0xe4:m -U hfuse:w:0xc9:m 
+
 
 ```
 '***************************************************************

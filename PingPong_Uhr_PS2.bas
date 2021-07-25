@@ -1,5 +1,5 @@
 '***************************************************************
-'Scrolling Clock für FRANZIS PINGPONG Platine
+'Clock für FRANZIS PINGPONG Platine
 '
 'Timer0 für Update display
 'Timer2 für Softclock
@@ -11,6 +11,8 @@
 '
 '25-7-2021 Peter Sieg
 'Display in decimal binary Hh : Mm left->right; top->down
+'At column 6 is just a diver betwwen hh and mm
+'
 '12:00
 ' 123456789ABC
 '0 **  *

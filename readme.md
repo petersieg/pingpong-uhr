@@ -1,3 +1,10 @@
+# pingpong-uhr
+
+Bascom Eval. Version used.
+
+Skeleton Program by Wolfram Herzog.
+
+
 ```
 '***************************************************************
 ' Clock für FRANZIS PINGPONG Platine

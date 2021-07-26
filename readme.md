@@ -2,7 +2,7 @@
 
 Bascom Eval. Version used.
 
-Skeleton Program by Wolfram Herzog.
+Skeleton Program by Wolfram Herzog: http://flugwiese.de/2017/09/pingpong-uhr-mit-scrolling/
 
 avrdude -c usbasp -p m8 -U flash:w:PingPong_Uhr_PS2.hex:i
 

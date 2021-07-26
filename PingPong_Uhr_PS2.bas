@@ -78,6 +78,8 @@ Initialisierung                                             'Ports und Interrupt
 
 
 '****************** Schleife zum Ansteuern aller LED'S ******************
+'Trenner hh : mm
+Leds(6) = &B01100110
 Do
   Zeit = Time$                                              'Zeitvariable muﬂ regelm‰ﬂig ausgelesen werden
   Gosub Machpixel                                           'update des Pixelfeldes
@@ -132,14 +134,6 @@ Gosub UpdLeds
 I = 2                                                       'Index String
 Iz = 3                                                      'Index Leds()  initialisieren
 Gosub UpdLeds
-'*** trenner
-Incr Iz
-Incr Iz
-Leds(iz) = &H00
-Incr Iz
-Leds(iz) = &B01100110
-Incr Iz
-Leds(iz) = &H00
 '*** mm zehner 0-5
 I = 4                                                       'Index String
 Iz = 9                                                      'Index Leds()  initialisieren

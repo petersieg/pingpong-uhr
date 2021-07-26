@@ -27,29 +27,29 @@ avrdude -c usbasp -p m8 -U lfuse:w:0xe4:m -U hfuse:w:0xc9:m
 'At column 6 is just a diver betwwen hh and mm
 '12:00
 ' 123456789ABC
-'0 **  *
-'1  *  *
-'2
+'0
+'1 **  *
+'2  *  *
 '3
-'4     *
+'4
 '5     *
-'6
+'6     *
 '7
 '8
 '9
 '
 '12:59
 ' 123456789ABC
-'0 **  *  **
-'1  *  *  **
-'2        **
+'0
+'1 **  *  **
+'2  *  *  **
 '3        **
-'4     *  **
-'5     *   *
-'6         *
+'4        **
+'5     *  **
+'6     *   *
 '7         *
 '8         *
-'9
+'9         *
 '
 'No config time - fix start at 12:00 when powering on
 '

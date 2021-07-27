@@ -12,7 +12,7 @@ avrdude -c usbasp -p m8 -U lfuse:w:0xe4:m -U hfuse:w:0xc9:m
 
 ```
 '***************************************************************
-' Clock für FRANZIS PINGPONG Platine
+'Clock für FRANZIS PINGPONG Platine
 '
 'Timer0 für Update display
 'Timer2 für Softclock
@@ -51,6 +51,6 @@ avrdude -c usbasp -p m8 -U lfuse:w:0xe4:m -U hfuse:w:0xc9:m
 '8         *
 '9         *
 '
-'No config time - fix start at 12:00 when powering on
+'No config off time - start fix at 12:00 when powering on
 '
 '***************************************************************

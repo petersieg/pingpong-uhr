@@ -11,35 +11,35 @@
 '
 '25-7-2021 Peter Sieg
 'Display in decimal binary Hh : Mm left->right; top->down
-'At column 6 is just a diver betwwen hh and mm
+'At column 6 is just a divider betwwen hh and mm
 '
 '12:00
 ' 123456789ABC
-'0
-'1 **  *
-'2  *  *
+'0 **  *
+'1  *  *
+'2
 '3
-'4
+'4     *
 '5     *
-'6     *
+'6
 '7
 '8
 '9
 '
 '12:59
 ' 123456789ABC
-'0
-'1 **  *  **
-'2  *  *  **
+'0 **  *  **
+'1  *  *  **
+'2        **
 '3        **
-'4        **
-'5     *  **
-'6     *   *
+'4     *  **
+'5     *   *
+'6         *
 '7         *
 '8         *
-'9         *
+'9
 '
-'No config time - fix start at 12:00 when powering on
+'No config off time - start fix at 12:00 when powering on
 '
 '***************************************************************
 
@@ -78,8 +78,6 @@ Initialisierung                                             'Ports und Interrupt
 
 
 '****************** Schleife zum Ansteuern aller LED'S ******************
-'Trenner hh : mm
-Leds(6) = &B01100110
 Do
   Zeit = Time$                                              'Zeitvariable muﬂ regelm‰ﬂig ausgelesen werden
   Gosub Machpixel                                           'update des Pixelfeldes
@@ -134,6 +132,14 @@ Gosub UpdLeds
 I = 2                                                       'Index String
 Iz = 3                                                      'Index Leds()  initialisieren
 Gosub UpdLeds
+'*** trenner
+Incr Iz
+Incr Iz
+Leds(iz) = &H00
+Incr Iz
+Leds(iz) = &B01100110
+Incr Iz
+Leds(iz) = &H00
 '*** mm zehner 0-5
 I = 4                                                       'Index String
 Iz = 9                                                      'Index Leds()  initialisieren

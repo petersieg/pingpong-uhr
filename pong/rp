@@ -1,0 +1,6 @@
+#!/bin/sh
+avrdude -c usbasp -p m8 -U flash:r:pong.hex:i
+
+
+
+

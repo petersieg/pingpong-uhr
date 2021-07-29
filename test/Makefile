@@ -5,6 +5,7 @@
 ## General Flags
 PROJECT = main
 MCU = atmega8
+F_CPU = 8000000
 TARGET = main.elf
 CC = avr-gcc.exe
 
@@ -13,6 +14,7 @@ COMMON = -mmcu=$(MCU)
 
 ## Compile options common for all C compilation units.
 CFLAGS = $(COMMON)
+CFLAGS += -DF_CPU=$(F_CPU)
 CFLAGS += -Wall -gdwarf-2  -Os -fsigned-char
 CFLAGS += -MD -MP -MT $(*F).o -MF dep/$(@F).d 
 
@@ -35,7 +37,7 @@ HEX_EEPROM_FLAGS += --change-section-lma .eeprom=0 --no-change-warnings
 
 
 ## Objects that must be built in order to link
-OBJECTS = main.o uart.o 
+OBJECTS = main.o 
 
 ## Objects explicitly added by the user
 LINKONLYOBJECTS = 
@@ -45,9 +47,6 @@ all: $(TARGET) main.hex main.eep size
 
 ## Compile
 main.o: ../main.c
-	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
-
-uart.o: ../uart.c
 	$(CC) $(INCLUDES) $(CFLAGS) -c  $<
 
 ##Link

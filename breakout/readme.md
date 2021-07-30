@@ -6,4 +6,4 @@ von Ralf Geske
 
 (Nur Standby auskommentiert von mir)
 
-!Breakout](https://github.com/petersieg/pingpong-uhr/blob/main/breakout/Breakout.jpeg)
+![Breakout](https://github.com/petersieg/pingpong-uhr/blob/main/breakout/Breakout.jpeg)

@@ -1,4 +1,4 @@
-# Breaout Spiel - gefunden hier:
+# Breakout Spiel - gefunden hier:
 
 http://ralf-geske.de/Breakout/Breakout.html
 
